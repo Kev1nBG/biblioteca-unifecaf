@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 h2 {
     width: 100%;
     font-size: 2rem;
@@ -327,16 +333,12 @@ footer {
     background-color: #113fe3;
 }
 
-/* MEDIA QUERIES (RESPONSIVIDADE PARA TABLETS E CELULARES) */
-
-/* Tablets (até 1024px) */
 @media (max-width: 1024px) {
     .Container-livros {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas nos livros */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Celulares (até 768px) */
 @media (max-width: 768px) {
     nav ul {
         justify-content: center;
@@ -350,26 +352,38 @@ footer {
     }
 
     .linha1 {
-        flex-direction: column; /* Empilha texto - foto - texto */
+        flex-direction: column;
         text-align: center;
     }
 
+    .linha2 {
+        flex-direction: column;
+    }
+
     .linha2 img {
-        flex: 1 1 100%;
+        width: 100%;
+        max-width: 100%;
         height: auto;
     }
 
     .Container-livros {
-        grid-template-columns: 1fr; /* 1 coluna para livros */
+        grid-template-columns: 1fr;
     }
 
     .unidade1, .unidade2, .unidade3 {
-        flex-direction: column; /* Empilha foto e texto das unidades */
+        flex-direction: column;
         text-align: center;
     }
 
+    .Container-unidades div img,
+    .Contatos-div img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
     .Contatos-div {
-        flex-direction: column; /* Empilha os contatos */
+        flex-direction: column;
         align-items: center;
     }
 
@@ -379,6 +393,6 @@ footer {
     }
 
     #Banner1, #Banner2 {
-        height: 200px; /* Reduz altura dos banners no celular */
+        height: 200px;
     }
 }
